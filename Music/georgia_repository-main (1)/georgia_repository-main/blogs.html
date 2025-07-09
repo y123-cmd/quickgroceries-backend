@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yvonne Bosire | Portfolio</title>
+
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0f172a;
+      color: white;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.light-mode {
+      background-color: #f8fafc;
+      color: #1e293b;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 60px;
+      right: 20px;
+      z-index: 999;
+    }
+
+    .navbar ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar ul li {
+      margin-bottom: 15px;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      font-size: 24px;
+      color: gold;
+    }
+
+    #theme-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: gold;
+  color: black;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: background-color 0.3s, transform 0.2s;
+}
+#theme-button:hover {
+  background-color: #ffd700;
+  transform: scale(1.1);
+}
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: #1e293b;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #cbd5e1;
+    }
+
+    section#projects {
+      padding: 2rem 1rem;
+      background-color: #0f172a;
+    }
+
+    section#projects h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .project-card {
+      background-color: #1e293b;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .project-card h3 {
+      margin: 1rem 1rem 0.5rem;
+    }
+
+    .project-card p {
+      margin: 0 1rem 1rem;
+      color: #cbd5e1;
+      font-size: 0.95rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #1e293b;
+      font-size: 0.9rem;
+      color: #94a3b8;
+    }
+
+    body.light-mode header,
+    body.light-mode footer {
+      background-color: #e2e8f0;
+      color: #1e293b;
+    }
+
+    body.light-mode .project-card {
+      background-color: #f1f5f9;
+      color: #1e293b;
+    }
+
+    body.light-mode .project-card p {
+      color: #475569;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ✅ Change Theme Button -->
+  <button id="theme-button" type="button" aria-label="Toggle Theme">
+    <i class="fas fa-adjust"></i>
+  </button>
+  
+
+  <!-- ✅ Navigation Menu -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="homepage.html"><i class="fas fa-home"></i><span class="sr-only">Home</span></a></li>
+      <li><a href="about.html"><i class="fas fa-user"></i><span class="sr-only">About</span></a></li>
+      <li><a href="portfolio.html"><i class="fas fa-briefcase"></i><span class="sr-only">Portfolio</span></a></li>
+      <li><a href="contact.html"><i class="fas fa-envelope"></i><span class="sr-only">Contact</span></a></li>
+    </ul>
+  </nav>
+
+  <!-- ✅ Header -->
+  <header>
+    <h1 style="font-weight: bold;">YVONNE</h1>
+    <p>Software Developer | Python & Web Enthusiast</p>
+  </header>
+
+  <!-- ✅ Projects Section -->
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="projects-grid">
+
+      <!-- Project Cards -->
+      <a href="https://github.com/y123-cmd/Health-system" target="_blank" class="project-card">
+        <img src="https://avatars.githubusercontent.com/u/9919?s=280&v=4" alt="Health System">
+        <h3>Health System</h3>
+        <p>CRUD operations in a basic health record system built with Flask.</p>
+      </a>
+
+      <a href="https://github.com/y123-cmd/coffee-shop" target="_blank" class="project-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/415/415733.png" alt="Coffee Shop">
+        <h3>Coffee Shop</h3>
+        <p>A simple web app to manage a coffee shop menu and orders.</p>
+      </a>
+
+      <a href="https://github.com/y123-cmd/adventure_game" target="_blank" class="project-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3952/3952539.png" alt="Adventure Game">
+        <h3>Adventure Game</h3>
+        <p>Text-based adventure game built in Python for CLI fun.</p>
+      </a>
+
+      <a href="https://github.com/y123-cmd/Social_media-api" target="_blank" class="project-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="Social Media API">
+        <h3>Social Media API</h3>
+        <p>RESTful API backend for a social media platform built with FastAPI.</p>
+      </a>
+
+      <a href="https://github.com/y123-cmd/recipe-api" target="_blank" class="project-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/1046/1046784.png" alt="Recipe API">
+        <h3>Recipe API</h3>
+        <p>API to search and manage food recipes using external data sources.</p>
+      </a>
+
+      <a href="https://github.com/y123-cmd/healthwebsite" target="_blank" class="project-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/535/535137.png" alt="Health Website">
+        <h3>Health Website</h3>
+        <p>A frontend website focused on promoting healthy living practices.</p>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ✅ Footer -->
+  <footer>
+    &copy; 2025 Yvonne Bosire. All rights reserved.
+  </footer>
+
+  <!-- ✅ Script for theme toggle -->
+  <script>
+    const themeBtn = document.getElementById('theme-button');
+    themeBtn.addEventListener('click', () => {
+      document.body.classList.toggle('light-mode');
+    });
+  </script>
+
+</body>
+</html>

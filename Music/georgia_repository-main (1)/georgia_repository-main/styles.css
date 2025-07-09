@@ -1,0 +1,450 @@
+/* Common styles for all themes */
+.navbar {
+    position: fixed;
+    top: 50px; /* Adjust the top position to move the navigation bar down */
+    right: 20px;
+    z-index: 999;
+    margin-top: 40px; /* Ensure navigation is above other content */
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin-bottom: 15px; /* Add spacing between navigation links */
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    font-size: 50px; /* Increase font size */
+    color: gold;
+}
+
+.text-content {
+    padding: 20px;
+}
+
+.download-link {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 20px; /* Increase font size */
+}
+
+/* Change color of download link on hover */
+.download-link:hover {
+    color: blue;
+}
+
+footer {
+    text-align: right;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+footer p {
+    color: purple; /* Set the color for the footer text */
+}
+
+/* Theme-specific styles */
+
+/* Dark theme */
+.dark-theme {
+    background-color: black;
+    color: white;
+}
+
+/* Light theme */
+.light-theme {
+    background-color: white;
+    color: black;
+}
+
+/* Blue theme */
+.blue-theme {
+    background-color: #3498db;
+    color: white;
+}
+
+/* Green theme */
+.green-theme {
+    background-color: #2ecc71;
+    color: white;
+}
+
+/* Additional style for theme button */
+#theme-button {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: lightgray;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.main-btn {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: lightgray;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.main-btn .btn-text {
+    display: inline-block;
+    margin-right: 10px; /* Adjust spacing between text and icon */
+}
+
+.main-btn .btn-icon:before {
+    content: "\f019"; /* Unicode for the download icon */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900; /* Regular weight */
+}
+
+/* Adjust icon size and color as needed */
+.main-btn .btn-icon:before {
+    font-size: 20px;
+    color: green;
+}
+/* Define styles for the clicked state of the download link */
+.main-btn.clicked .btn-text {
+    color: blue; /* Change the color of the text */
+}
+
+.main-btn.clicked .btn-icon {
+    color: blue; /* Change the color of the icon */
+}
+/*Additional styles for main-btn */
+.main-btn .btn-icon {
+    display: inline-block;
+    color: green; /* Default color of the icon */
+}
+
+.main-btn .btn-text {
+    display: inline-block;
+    margin-right: 10px; /* Adjust spacing between text and icon */
+    background-color: lightgray; /* Default background color of the text */
+    padding: 5px 10px; /* Add padding to the text */
+    border-radius: 5px; /* Add border radius */
+}
+
+/* Change styles when hovering over the button */
+.main-btn:hover .btn-icon {
+    color: blue; /* Change the color of the icon */
+}
+
+.main-btn:hover .btn-text {
+    background-color: blue; /* Change the background color of the text */
+    color: white; /* Change the color of the text */
+}
+
+#name {
+    color: green;
+}
+
+
+.dark-theme #name {
+    color: orangered;
+}
+.download-link.clicked{
+color: green;
+}
+
+#download-cv-btn.clicked .btn-text {
+    color: blue; 
+}
+
+#download-cv-btn.clicked .btn-icon {
+    color: blue; 
+}
+
+
+
+progress {
+    width: 100%; 
+}
+
+
+progress::-webkit-progress-value {
+    background-color: green; 
+}
+
+progress::-moz-progress-bar {
+    background-color: green; 
+}
+.timeline-section {
+    padding: 20px;
+}
+
+.timeline {
+    list-style-type: none;
+    position: relative;
+}
+
+.timeline-content {
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 20px;
+    position: relative;
+}
+
+.timeline-content h3 {
+    margin-top: 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: #555;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+}
+
+.timeline li {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+.timeline li:nth-child(odd) {
+    align-self: flex-end;
+}
+
+.timeline li:nth-child(odd) .timeline-content {
+    margin-left: auto;
+}
+
+.timeline li:nth-child(odd)::before {
+    right: auto;
+    left: -8px;
+}
+.graduation-icon{
+    font-size: 2em;
+    color: blue;
+    margin-left: 0.5em;
+}
+body{
+    background-color: lightgray;
+}
+/* Default styles */
+.email {
+    color: blue; /* Set the default color */
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 600px) {
+    .email {
+        display: block; /* Make it a block element */
+        margin-top: 10px; /* Add some spacing */
+        font-size: 14px; /* Decrease font size for smaller screens */
+        color: blue; /* Set the color */
+    }
+}
+/* Define a class for the progress bars */
+.progress-bar-green {
+    background-color: green; /* Set the background color to green */
+}
+
+/* Apply the class to all progress elements */
+progress[value] {
+    /* The style here is just to ensure the progress bar is visible */
+    width: 100%;
+    height: 20px;
+}
+
+/* Apply the green color to progress bars with the class */
+progress[value].progress-bar-green::-webkit-progress-value {
+    background-color: green; /* Set the background color to green for WebKit browsers */
+}
+
+progress[value].progress-bar-green::-moz-progress-bar {
+    background-color: green; /* Set the background color to green for Firefox */
+}
+.blue-text{
+    color: deepskyblue;
+}
+.blue-text{
+    color: deepskyblue;
+}
+/* Style for active icon link */
+.navbar a.active {
+    color: #00f; /* Change the color to indicate active state */
+}
+/* Enlarge the Font Awesome icons */
+.icon i {
+    font-size: 30px; /* Adjust the font size as needed */
+}
+.contact-icon a i.fab.fa-github {
+    font-size: 30px; /* Adjust the font size as needed */
+}
+.contact-icons {
+    display: flex; /* Use flexbox to align icons horizontally */
+    align-items: center; /* Align items vertically in the center */
+}
+
+.contact-icon {
+    margin-right: 10px; /* Add some spacing between icons */
+}
+
+.contact-icon a i {
+    font-size: 30px; 
+}
+.contact-item {
+    display: flex; 
+    align-items: center; 
+    margin-bottom: 10px; 
+}
+
+.contact-item .icon {
+    display: flex; 
+    align-items: center; 
+}
+
+.contact-item .icon span {
+    display: none; 
+}
+
+.contact-item .icon i {
+    margin-right: 5px; 
+}
+
+.contact-item .icon a {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.contact-item .icon a {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.contact-item .icon a i {
+    margin-right: 5px; 
+}
+.image-container {
+    max-width: 600px; 
+    margin: 0 auto;
+}
+
+.responsive-image {
+    width: 70%; 
+    height: auto; 
+    transition: transform 0.2s ease; 
+}
+
+.move-on-hover:hover {
+    transform: translate(-5px, -5px); 
+}
+h1 {
+    font-size: 40px;
+}
+
+#name {
+    font-size: 40px;
+}
+
+
+
+#contact h1 {
+    font-size: 40px; 
+    text-align: center; 
+    margin-top: 50px; 
+    margin-bottom: 20px; 
+  }
+
+.contact-form {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    position: fixed;
+    top: 70px;
+    right: 180px;
+    margin-right: 0px;
+}
+
+
+.form-group {
+    position: relative;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.form-group:last-child{
+    margin-right: 0;
+}
+
+.form-group label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    pointer-events: none;
+    transition: 0.3s;
+    color: #777;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 120%;
+    max-width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+
+.form-group input[type="text"]:focus ~ label,
+.form-group input[type="email"]:focus ~ label,
+.form-group textarea:focus ~ label {
+    top: -10px;
+    left: 10px;
+    font-size: 12px;
+    color: #007bff;
+}
+.contact-form textarea {
+    width: calc(100%-20px);
+    height: 120px;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+.form-group label.active {
+    top: -10px;
+    left: 10px;
+    font-size: 12px;
+    color: #007bff;
+}
+
+  
+
+  
+
