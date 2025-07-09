@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <!-- Link to Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Link to your custom CSS file -->
+    <link rel="stylesheet" href="styles.css">
+     <!-- Link to your JavaScript file -->
+     <script src="script.js" defer></script> <!-- Add 'defer' attribute to ensure script runs after DOMContentLoaded -->
+</head>
+<body>
+     <!--theme button-->
+     <button id="theme-button" type="button"> change theme</button>
+    
+     <!-- Navigation -->
+     <nav class="navbar">
+         <ul>
+             <li><a href="index.html"><i class="fas fa-home"></i><span class="sr-only">Home</span></a></li>
+             <li><a href="about.html"><i class="fas fa-user"></i><span class="sr-only">About</span></a></li>
+             <li><a href="portfolio.html"><i class="fas fa-briefcase"></i><span class="sr-only">Portfolio</span></a></li>
+             <li><a href="contact.html"><i class="fas fa-envelope"></i><span class="sr-only">Contact</span></a></li>
+             <li><a href="blogs.html"><i class="fas fa-blog"></i><span class="sr-only">Blogs</span></a></li>
+         </ul>
+     </nav>
+    <section class="section sec5 contact" id="contact">
+        <div class="class-container">
+            <div class="main-title">
+                <h1><b>Contact Me</b></h1>
+            </div>
+            <div class="contact-content-con">
+                <div class="left-contact">
+                    <p><b><i>Contact me here</i></b></p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <p>Nairobi, Kenya.</p>
+                        </div>
+                        <div class="contact-item">
+                            <div class="icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <p><a href="mailto:yvonnebosire24@gmail.com">yvonnebosire24@gmail.com</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <div class="icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <p>Mount Kenya University</p>
+                        </div>
+                        <div class="contact-item">
+                            <div class="icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <p>+245796624370</p>
+                        </div>
+                        <div class="contact-item">
+                            <div class="icon">
+                                <i class="fas fa-language"></i>
+                            </div>
+                            <p>English, Swahili</p>
+                        </div>
+                        <div class="contact-item">
+                            <div class="icon">
+                                <a href="https://www.linkedin.com/in/yvonne-bosire-346b96222" target="_blank" rel="noopener">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-icons">
+                        <div class="contact-icon">
+                            <a href="https://github.com/y860" target="_blank" rel="noopener" aria-label="GitHub Profile">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <form action="submit_contact.php" method="post">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Enter Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="4" placeholder="Enter Message" required></textarea>
+                        </div>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
